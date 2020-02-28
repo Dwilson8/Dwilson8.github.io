@@ -1,0 +1,101 @@
+/* @media from W3 Schools https://www.w3schools.com/cssref/css3_pr_mediaquery.asp */
+@media only screen and (max-width: 1000px) {
+
+    .wrapper{
+        display: flex;
+        justify-content: center;
+    }
+    
+    .content{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .profile{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .headshot{
+        display: flex;
+        margin-bottom: 5px;
+    }
+
+    .blurb{
+        display: flex;
+        margin-bottom: 5px;
+    }
+}
+.body{
+    background-color: #C29676;
+}
+
+.header{
+    background-color: #306F75;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.name{
+    color: whitesmoke;
+    display: flex;
+    margin: 5px;
+}
+
+.testudo{
+    display:flex;
+    margin: 5px;
+}
+
+.wrapper{
+    display:flex;
+    justify-content: center;
+}
+
+.content{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    max-width: 960px
+}
+
+.profile{
+    display:flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 2;
+    margin: 10px;
+}
+
+.roles{
+    display:flex;
+    flex-grow: 2;
+    flex-shrink: 1;
+    font-family: 'Simonetta';
+    background-color: #FFD4B5;
+    border: 1px dashed black;
+    margin: 10px;
+}
+
+.headshot{
+    display: flex;
+    border: 1px solid black;
+    border-radius: 4px;
+    margin: 10px;
+}
+
+.blurb{
+    display: flex;
+    background-color: #FFD4B5;
+    margin: 10px;
+}
+
+.title{
+    font-weight: bold;
+}
