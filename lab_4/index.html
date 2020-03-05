@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Prof A's Demo Page</title>
+    <title>Duncan's Demo Page</title>
     <link rel="stylesheet" type="text/css" href="./style.css" />
     
   </head>
@@ -9,7 +9,7 @@
   <body>
     <div class="container">
       <div class="wrapper">
-        <div class="header">Prof A's Demo Page</div>
+        <div class="header" onload="head()">Prof A's Lab 4</div>
         <button class="button" onclick="clickMe()">
           Click me to make a change
         </button>
@@ -25,10 +25,23 @@
         <div class="footer"></div>
       </div>
     </div>
+    <!---Most stuff below from Mozilla textbook, some from W3-->
     <script>
+      const first = 'Duncan'
+      const last = 'Wilson'
+
       function clickMe() {
         const content = document.querySelector(".content");
         content.innerHTML = "Hello world";
+      }
+
+      function head(){
+        let heading = document.querySelector('.header');
+        heading.innerHTML = first + "'" + 's Lab 4';
+      }
+
+      function par(){
+        const content = document.querySelector(".content");
       }
     </script>
   </body>
