@@ -280,6 +280,19 @@
       { "name": "Zimbabwe", "code": "ZW" }
     ]
     console.log("List of countries in the world", countries);
+
+    document.body.onload = addList;
+    
+    /* From MDN */
+    function addList(){
+      const newOl = document.createElement("ol");
+      newOl.className += "countries"; /*geeksforgeeks.org*/
+      var content = document.createTextNode("Testing 123");
+      newOl.appendChild(content);
+
+      var currentDiv = document.getElementById("content");
+      document.body.insertBefore(newOl, currentDiv);
+    }
   </script>
 </body>
 
