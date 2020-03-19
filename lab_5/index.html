@@ -12,7 +12,7 @@
       <div class="header">Duncan's List Of Countries</div>
       <button class="button" onclick="randCountry()">Click me to replace list
         entries</button>
-      <div class="content">
+      <div class="content" id="content">
 
       </div>
       <div class="footer"></div>
@@ -267,20 +267,8 @@
     ]
     console.log("List of countries in the world", countries);
 
-    document.body.onload = addList;
-    
-    /* From MDN */
-    function addList(){
-      let newOl = document.createElement("ol");
-      newOl.className += "countries"; /*geeksforgeeks.org*/
-      let content = document.createTextNode("Testing 123");
-      newOl.appendChild(content);
-
-      let currentDiv = document.getElementById("content");
-      currentDiv.document.body.insertAdjacentHTML("afterbegin", newOl);
-    }
-
-    /*MDN Math.random()*/
+    //MDN Math.random()
+    //Selects a random number from min to max
     function randNumber(min, max){
       min = Math.ceil(min);
       max = Math.floor(max);
@@ -288,7 +276,34 @@
     }
 
     function randCountry(){
-      
+      //Declare variables
+      let countryList2 = countries;
+      let countryListDisplay = [];
+
+      //Create an array of 25 random unique countries
+      for (let count = 0; count < 25; count++){
+        let num = randNumber(0, countryList2.length);
+        countryListDisplay.push(countryList2[num].name);
+        let countryList3 = countryList2.splice(num, 1);
+      }
+
+      //Set up the ordered list
+        let newOl = document.createElement("ol");
+        newOl.className += "countries"; //geeksforgeeks.org
+        let currentDiv = document.getElementById("content");
+        currentDiv.appendChild(newOl);
+
+      //Append countries to the ordered list
+      countryListDisplay.forEach((country) => {       
+        let content = document.createTextNode(country);
+        let newLi = document.createElement("li");
+        newLi.appendChild(content);
+        newOl.appendChild(newLi);
+      })
+      //window.alert(countryListDisplay);
+
+      //Log the rest of the countries to the console
+      console.log(countryList3);
     }
   </script>
 </body>
