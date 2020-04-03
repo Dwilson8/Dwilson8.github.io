@@ -1,4 +1,11 @@
 h1 {
+  flex-wrap: wrap;
+  font-family: helvetica, arial, sans-serif;
+  text-align: center;
+}
+
+h2 {
+  flex-wrap: wrap;
   font-family: helvetica, arial, sans-serif;
   text-align: center;
 }
@@ -40,4 +47,13 @@ button {
   width: 20%;
   float: left;
   cursor: pointer;
+}
+
+.thumb-bar {
+  display: flex;
+}
+
+.image-gallery {
+  align-self: center;
+  align-content: center;
 }
