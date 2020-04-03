@@ -14,7 +14,7 @@ thumbBar.appendChild(newImage);
 //LOOP FROM MDN CODE
 for(let i = 1; i <= 5; i++) {
     const newImage = document.createElement('img');
-    newImage.setAttribute('src', 'images/pic' + i + '.jpg');
+    newImage.setAttribute('src', 'Images/Pic' + i + '.jpg');
     thumbBar.appendChild(newImage);
     newImage.onclick = function(e) {
       displayedImage.src = e.target.src;
