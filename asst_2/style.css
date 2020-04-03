@@ -11,6 +11,8 @@ h2 {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   width: 640px;
   margin: 0 auto;
 }
@@ -54,6 +56,6 @@ button {
 }
 
 .image-gallery {
+  flex-wrap: wrap;
   align-self: center;
-  align-content: center;
 }
