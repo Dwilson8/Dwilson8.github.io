@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <title>Forms Lab</title>
+    <link rel="stylesheet" type="text/css" href="form_styles.css">
   </head>
   <body>
     <div class="wrapper">
@@ -14,15 +15,19 @@
           <ul>
             <li>
               <label for='name'>Name</label>
+            </li>
+            <li>
               <input type='text' id='name' name='username' maxlength="140">
             </li>
             <li>
               <label for='interests'>Interests</label>
+            </li>
+            <li>
               <textarea id='interests' name='message' 
               rows='5' cols='33'>By default this element is filled with this text.</textarea>
             </li>
             <li class='button'>
-              <button type='submit'>Send your message</button>
+              <button type='submit'>Submit</button>
             </li>
           </ul>
         </form>

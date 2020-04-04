@@ -1,19 +1,41 @@
 body{
-    background-color: lightgray;
+    display: flex;
+    background-color:whitesmoke;
+    color: rgb(71, 71, 71);
+    font-family: helvetica, arial, sans-serif;
+    justify-content: center;
+    align-items: center;
 }
 
 form {
-display:flex;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 label {
-
+    color: rgb(71, 71, 71);
+    font-family: helvetica, arial, sans-serif;
+    font-weight: bold;
 }
 
 input, textarea {
-    
+    color: rgb(71, 71, 71);
+    font-family: 'Courier New', Courier, monospace;
 }
 
 ul {
-
+    list-style-type: none; /*W3*/
+    padding-left: 0;
 }
+
+li {
+    padding: 5px;
+}
+
+button {
+    background-color: rgb(255, 209, 123);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    border-color: rgb(255, 196, 87)
