@@ -37,5 +37,6 @@ button {
     background-color: rgb(255, 209, 123);
     color: white;
     padding: 10px;
-    border-radius: 10px;
-    border-color: rgb(255, 196, 87)
+    border-radius: 10px;/*W3*/
+    border-color: rgb(255, 196, 87);
+}
