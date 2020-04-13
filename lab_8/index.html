@@ -9,7 +9,7 @@
     <div class="container">
       <div class="wrapper">
         <div class="header">Frontend Libraries: Charts Lab</div>
-        <div class="content">
+        <div class="content style="height: 300px; width: 100%;">
           When your lab is done, this should be replaced with a useful chart full of food data.
         </div>
         <div class="footer">Let's eat out in the future!</div>
@@ -48,6 +48,28 @@
           });
           return reformattedData; // <- this will pass the data to the next "then" statement when I'm ready.
         })
+        .then((results) => {
+          console.log(results);
+          const chart = new CanvasJS.Chart("content", { //Chart from CanvasJS
+            animationEnabled: true,
+            theme: "light1",
+            title:{
+              text: "PG County Restaurants"
+            },
+            axisY: {
+              title: "Reserves(MMbbl)"
+            },
+            data: [{        
+              type: "column",  
+              showInLegend: true, 
+              legendMarkerColor: "grey",
+              legendText: "MMbbl = one million barrels",
+              dataPoints: results
+            }]
+          });
+          chart.render();
+
+}
     </script>
   </body>
 </html>
