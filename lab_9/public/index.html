@@ -19,6 +19,38 @@
       .then(res => res.json())
       .then(res => {
         // Here's where your chart code should go.
+        const chart = new CanvasJS.Chart("content", { //Chart from CanvasJS
+            animationEnabled: true,
+            theme: "dark2",
+            title:{
+              text: "Let's Find Somewhere to Eat"
+            },
+            axisY: {
+              title: "Number of Restaurants",
+              scaleBreaks: {
+                type: "wavy",
+                customBreaks: [{
+                  startValue: 20,
+                  endValue: 35
+                  },
+                  {
+                  startValue: 60,
+                  endValue: 120
+                  },
+                  {
+                  startValue: 160,
+                  endValue: 220
+                  },
+		]}
+            },
+            data: [{        
+              type: "column",  
+              showInLegend: true, 
+              legendMarkerColor: "grey",
+              dataPoints: results
+  }]
+});
+chart.render();
       })
   </script>
 </body>
